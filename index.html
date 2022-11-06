@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Photo Editor</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="image">
+        <div class="imageContainer">
+          <img id="img">
+          <canvas id="canvas"></canvas>
+        </div>
+        <div class="upload">
+          <Label for="upload">Upload</Label>
+          <input type="file" id="upload">
+        </div>
+      </div>
+      <div class="filters">
+        <ul>
+          <li>
+            <Label for="saturation">Saturation</Label>
+            <input type="range" id="saturation" min="0" max="200" value="100">
+          </li>
+          <li>
+            <Label for="contrast">Contrast</Label>
+            <input type="range" id="contrast" min="0" max="200" value="100">
+          </li>
+          <li>
+            <Label for="brightness">Brightness</Label>
+            <input type="range" id="brightness" min="0" max="200" value="100">
+          </li>
+
+          <li>
+            <Label for="sepia">Sepia</Label>
+            <input type="range" id="sepia" min="0" max="200" value="0">
+          </li>
+
+          <li>
+            <Label for="grayscale">Grayscale</Label>
+            <input type="range" id="grayscale" step=".1" min="0" max="1" value="0">
+          </li>
+          <li>
+            <Label for="blur">Blur</Label>
+            <input type="range" id="blur" step=".1" min="0" max="10" value="0">
+          </li>
+          <li>
+            <Label for="hue-rotate">Hue Rotate</Label>
+            <input type="range" id="hue-rotate" min="0" max="350" value="0">
+          </li>
+          <li>
+            <a download="image" class="download" id="download">Download</a>
+            <span onClick="resetValues()">Reset</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="code.js"></script>
+  </body>
+</html>
